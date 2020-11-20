@@ -47,27 +47,27 @@ namespace Shop.WebUI.Controllers
 
         }
 
-        public ActionResult Edit(int id)
-        {
-            try
-            {
-                Product p = context.FindById(id);
-                if (p == null)
-                {
-                    return HttpNotFound();
-                }
-                else
-                {
-                    return View(p);
-                }
-            }
-            catch (Exception)
-            {
+        //public ActionResult Edit(int id)
+        //{
+        //    try
+        //    {
+        //        Product p = context.FindById(id);
+        //        if (p == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+        //        else
+        //        {
+        //            return View(p);
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
 
-                return HttpNotFound();
-            }
+        //        return HttpNotFound();
+        //    }
 
-        }
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
