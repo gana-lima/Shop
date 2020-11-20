@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shop.Core.Models;
+using Shop.DataAccess.InMemory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
