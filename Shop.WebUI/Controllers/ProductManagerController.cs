@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shop.Core.Models;
+using Shop.DataAccess.InMemory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -45,27 +47,27 @@ namespace Shop.WebUI.Controllers
 
         }
 
-        public ActionResult Edit(int id)
-        {
-            try
-            {
-                Product p = context.FindById(id);
-                if (p == null)
-                {
-                    return HttpNotFound();
-                }
-                else
-                {
-                    return View(p);
-                }
-            }
-            catch (Exception)
-            {
+        //public ActionResult Edit(int id)
+        //{
+        //    try
+        //    {
+        //        Product p = context.FindById(id);
+        //        if (p == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+        //        else
+        //        {
+        //            return View(p);
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
 
-                return HttpNotFound();
-            }
+        //        return HttpNotFound();
+        //    }
 
-        }
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
